@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vila Leopoldina</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tiro Devanagari Hindi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <ul class="menu">
+            <li class="menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
+            <li class="menu-item"><a href="historia-do-bairro.html">História do bairro</a></li>
+            <li class="menu-item"><a href="demografia.html">Demografia</a></li>
+            <li class="menu-item"><a href="cultura-lazer.html">Cultura e lazer</a></li>
+            <li class="menu-item"><a href="comercio-local.html">Comércio local</a></li>
+            <li class="menu-item"><a href="em-destaque.html">Em destaque</a></li>
+            <li class="menu-item"><a href="cadastro.html"><i class="fa fa-user"></i></a></li>
+        </ul>
+
+        <div class="banner">
+            <img src="assets/images/banner-dm.jpg">
+            <div class="message">
+                <img src="assets/images/logo.png" alt="">
+                <h1>Demografia</h1>
+                <p>Estatísticas da Vila Leopoldina</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="demografia py-50">
+        <div class="container">
+
+            <div class="card-l">
+                <div class="card">
+                    <span class="title">Distrito Vila Leopoldina</span>
+        
+                    <div class="card-content">
+                        <ol>
+                            <li>Estimativa Populacional: 26.042</li>
+                            <li>Taxa anual de Crescimento: -0,25</li>
+                            <li>Taxa anual de Natalidade: 16,45</li>
+                            <li>Anualmente Migram para esse distrito: 441 pessoas</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-r">
+                <div class="card">
+                    <span class="title">Estabelecimentos Comerciais</span>
+        
+                    <div class="card-content">
+                        <ul>
+                            <span>Total de Estab. Comerciais: 1.962</span>
+                            <span>Na área de:</span>
+                            <li>- Agropecuária: 43</li>
+                            <li>- Extração Mineral: 1</li>
+                            <li>- Indústria: 213</li>
+                            <li>- Indus. Utilidade Pública: 2 </li>
+                            <li>- Construção Civil: 45</li>
+                            <li>- Comércio: 1.157</li>
+                            <li>- Serviços: 501</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-l">
+                <div class="card">
+                    <span class="title">Empregos</span>
+        
+                    <div class="card-content">
+                        <ul>
+                            <span>Média anual de Empregos no <br>setor de:</span>
+                            <li>- Agropecuária: 178</li>
+                            <li>- Extração Mineral: 9</li>
+                            <li>- Indústria: 7.309</li>
+                            <li>- Indus. Utilidade Pública: 90</li>
+                            <li>- Construção Civil: 988</li>
+                            <li>- Comércio: 7.986</li>
+                            <li>- Serviços: 31.195</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-r">
+                <div class="card">
+                    <span class="title">Ensino</span>
+        
+                    <div class="card-content">
+                        <ul>
+                            <span>Escolaridade com:</span>
+                            <li>- Menos de 1 ano de escola: 2.596</li>
+                            <li>- 1º grau Incompleto: 10.425</li>
+                            <li>- 1º grau Completo: 3.758</li>
+                            <li>- 2º grau Completo: 5.613</li>
+                            <li>- 3º grau Completo: 3.520</li>
+                            <li>- Anos de estudo não determinados: 208</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="content">
+            <img src="assets/images/logo.png" alt="" class="logo-footer">
+
+            <div class="address">
+                <span>Web Leopoldina</span>
+                <p>Avenida Imperatriz Leopoldina, 845 - Lapa - CEP: 053053-011</p>
+            </div>
+            <div class="contacts">
+                <span>Contatos:</span>
+                <ul>
+                    <li><i class="fa fa-phone"></i>097</li>
+                    <li><i class="fa fa-envelope"></i>lais.barros@germinare.org.br</li>
+                    <li><i class="fa fa-instagram"></i>@llaiscb</li>
+                </ul>
+            </div>
+            <div class="cpa">
+                <img src="assets/images/cpa.png" alt="">
+            </div>
+            <div class="cil">
+                <img src="assets/images/cil.png" alt="">
+            </div>
+        </div>
+        <div class="copy">
+            <div class="container">
+                <p>&copy; Copyright 2022, Avenida Imperatriz Leopoldina, 845 - Lapa - CEP: 053053-011</p>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,181 @@
+body {
+    background-image: url(../images/background-cadastro.jpg);
+    background-size: auto;
+    background-position: center;
+}
+
+.sing-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+form {
+  width: 350px;
+  max-height: 450px;
+  margin: 0 auto;
+  padding: 50px 0;
+  background: rgba(59, 173, 112, 0.55);
+}
+
+h1 {
+  font-family: 'Oswald';
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.container_input {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Tiro Devanagari Hindi';
+}
+
+.cont_input {
+  padding: 10px 0 0 0;
+  position: relative;
+}
+.cont_input:after, .cont_input:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+}
+.cont_input:after {
+  background-color: white;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+.cont_input:before {
+  background-color: gray;
+  background-color: #fff;
+  transform: scaleX(0);
+  height: 34px;
+  transition: all 0.2s;
+}
+.cont_input.active:after, .cont_input.active:before {
+  transform: scaleX(1);
+}
+.cont_input.active .label {
+  color: #000;
+}
+.cont_input.ready .label {
+  transform: translateY(0);
+}
+.cont_input .label {
+  display: block;
+  font-size: 16px;
+  transform: translateY(25px);
+  color: #000;
+  transition: all 0.5s;
+  height: 18px;
+}
+.cont_input .input {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #d9d9d9;*/
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #000;
+}
+.cont_input .input:focus:after {
+  content: "";
+  background-color: #f00;
+  height: 50px;
+}
+
+/* Button send */
+.button {
+  color: white;
+  border: none;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  background: #e8a612;
+  pointer-events: fill;
+}
+
+.button__container {
+  --shadow-size: 0;
+  max-width: 300px;
+  color: rgba(59, 173, 112, 0.55);
+  position: relative;
+  pointer-events: none;
+  overflow: hidden;
+}
+.button__container::after {
+  left: 50%;
+  transform: translateX(-51%);
+  box-shadow: 270px 0px 0 0px;
+}
+.button__container::before {
+  left: -50%;
+  transform: translateX(50%);
+  box-shadow: -270px 0px 0 0px;
+}
+.button__container::before, .button__container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 102%;
+  height: 100%;
+  top: 0px;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: 2;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.button__container.is--active {
+  pointer-events: fill;
+  cursor: wait;
+}
+.button__container.is--active .button {
+  pointer-events: none;
+}
+.button__container.is--active .button__icon {
+  transform: none;
+  opacity: 1;
+}
+.button__container.is--active .button__text {
+  transition-delay: 0s;
+  transform: translateY(5px);
+  opacity: 0;
+}
+.button__container.is--active::before {
+  transform: translateX(91.5%);
+}
+.button__container.is--active::after {
+  transform: translateX(-93%);
+}
+
+.button__icon {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 225ms 100ms ease-in-out;
+}
+
+.button__text {
+  will-change: opacity;
+  transition: all 195ms 150ms ease-in-out;
+}
